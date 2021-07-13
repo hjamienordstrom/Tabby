@@ -9,3 +9,6 @@ def home(request):
 
 def about(request):
   return render(request, 'about.html')
+
+def trips_detail(request, trip_id):
+   return render(request, 'trips/detail.html')

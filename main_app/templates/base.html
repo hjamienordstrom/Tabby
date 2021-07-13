@@ -34,7 +34,8 @@
             <a id="seeMoreButton">See More</a>
           </div>
           <div class="generalContentBlock">
-            <button id="tripBlock">
+            {% for trip in trips %}
+            <a id="tripBlock" href="{% url 'detail' trip.id %}">
               <img id="tripImage" src="https://gaijinpot.scdn3.secure.raxcdn.com/app/uploads/sites/4/2014/08/fireworks_0-1024x640.jpg" alt="W3Schools.com">
               <div class="tripImageShading"></div>
               <div class="tripContent">
@@ -43,7 +44,8 @@
                   <p id="tripUserName">Stevan Johnson</p>
                 </div>
               </div>
-            </button>
+            </a>
+            {% endfor %}
 
             <button id="tripBlock">
                 <img id="tripImage" src="https://gaijinpot.scdn3.secure.raxcdn.com/app/uploads/sites/4/2014/08/fireworks_0-1024x640.jpg" alt="W3Schools.com">
